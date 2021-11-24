@@ -1,0 +1,107 @@
+<%= form_with(model: cad) do |form| %>
+  <% if cad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cad.errors.count, "error") %> prohibited this cad from being saved:</h2>
+
+      <ul>
+        <% cad.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"CNPJ/CPF" %>
+    <%= form.text_field :cnpjcpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"Inscrição Estadual" %>
+    <%= form.text_field :ie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular %>
+    <%= form.text_field :celular %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"Nome de Contato" %>
+    <%= form.text_field :nomecont%>
+  </div>
+
+  <div class="field">
+    <%= form.label :"data de nascimento" %>
+    <%= form.date_select :dtnasc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"celular 2" %>
+    <%= form.text_field :celular2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"telefone 2" %>
+    <%= form.text_field :telefone2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"nome de contato 2" %>
+    <%= form.text_field :nomecont2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cep %>
+    <%= form.text_field :cep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rua %>
+    <%= form.text_area :rua %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numcasa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bairro %>
+    <%= form.text_area :bairro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :país %>
+    <%= form.text_field :pais %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
